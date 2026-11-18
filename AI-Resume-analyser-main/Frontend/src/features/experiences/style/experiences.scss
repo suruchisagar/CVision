@@ -1,0 +1,31 @@
+$primary: #e14b33;
+$card: #111d28;
+$muted: #99a8b8;
+
+.experiences-page { min-height: 100vh; padding: 32px 24px 60px; background: radial-gradient(circle at 10% 5%, rgba(225,75,51,.2), transparent 28%), radial-gradient(circle at 94% 60%, rgba(27,134,255,.16), transparent 32%), #09131d; position: relative; overflow: hidden; }
+.experiences-container { max-width: 1180px; margin: auto; position: relative; z-index: 1; }
+.community-nav { display: flex; justify-content: space-between; align-items: center; color: $muted; font-size: .9rem; }
+.community-nav button { background: transparent; border: 0; color: #f5f7fb; cursor: pointer; padding: 8px 0; }
+.community-hero { max-width: 720px; margin: 76px 0 42px; }
+.community-eyebrow { margin: 0 0 10px; color: #ff8a69; text-transform: uppercase; letter-spacing: .12em; font-size: .72rem; font-weight: 800; }
+.community-hero h1 { margin: 0; font-size: clamp(2.4rem, 5vw, 4.4rem); line-height: 1.04; }
+.community-hero > p:last-child { max-width: 650px; color: $muted; line-height: 1.7; font-size: 1.05rem; }
+.community-layout { display: grid; grid-template-columns: minmax(300px, .85fr) minmax(0, 1.35fr); gap: 28px; align-items: start; }
+.share-card, .feed-section { border: 1px solid rgba(255,255,255,.08); background: rgba(17,29,40,.88); box-shadow: 0 20px 55px rgba(0,0,0,.28); border-radius: 24px; padding: 28px; backdrop-filter: blur(16px); }
+.share-card h2, .feed-heading h2 { margin: 0; font-size: 1.4rem; }.share-card > p { color: $muted; line-height: 1.55; margin: 8px 0 24px; }
+.share-card form, .share-card label { display: flex; flex-direction: column; gap: 8px; font-weight: 650; font-size: .9rem; }.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+.share-card input, .share-card textarea { width: 100%; border: 1px solid rgba(255,255,255,.1); border-radius: 12px; background: #182734; color: #f5f7fb; outline: none; padding: 12px; font: inherit; font-weight: 400; }.share-card textarea { min-height: 210px; line-height: 1.6; resize: vertical; }.share-card input:focus, .share-card textarea:focus { border-color: $primary; box-shadow: 0 0 0 3px rgba(225,75,51,.15); }
+.form-footer, .feed-heading, .post-topline { display: flex; align-items: center; justify-content: space-between; gap: 12px; }.form-footer { margin-top: 14px; }.form-footer small, .feed-heading > span { color: $muted; }.form-footer button { border: 0; border-radius: 12px; padding: 12px 18px; color: white; background: linear-gradient(135deg, $primary, #ff7a45); font-weight: 750; cursor: pointer; }.form-footer button:disabled { opacity: .7; cursor: wait; }.community-message { margin: 18px 0 0; padding: 12px; border-radius: 10px; color: #ffd0c5; background: rgba(225,75,51,.1); font-size: .9rem; }
+.feed-heading { padding-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,.07); }.feed-heading .community-eyebrow { margin-bottom: 5px; }.post-list { display: grid; gap: 15px; margin-top: 18px; }.experience-post { padding: 20px; background: rgba(24,39,52,.8); border: 1px solid rgba(255,255,255,.06); border-radius: 18px; }.company-mark { display: grid; place-items: center; flex: 0 0 42px; width: 42px; height: 42px; border-radius: 13px; background: rgba(225,75,51,.16); color: #ff9b80; font-weight: 850; }.post-topline { justify-content: flex-start; }.post-topline h3, .post-topline p { margin: 0; }.post-topline h3 { font-size: 1rem; }.post-topline p, .post-topline time { color: $muted; font-size: .82rem; }.post-topline time { margin-left: auto; white-space: nowrap; }.post-copy { margin: 16px 0 0; color: #dce3eb; white-space: pre-wrap; line-height: 1.65; }.feed-status, .feed-empty { color: $muted; padding: 28px 0; }.feed-empty h3, .feed-empty p { margin: 0; }.feed-empty p { margin-top: 7px; line-height: 1.55; }
+@media (max-width: 850px) {
+  .community-layout { grid-template-columns: 1fr; }
+  .community-hero { margin-top: 50px; }
+}
+
+@media (max-width: 520px) {
+  .experiences-page { padding: 22px 14px 45px; }
+  .share-card, .feed-section { padding: 20px; }
+  .field-row { grid-template-columns: 1fr; }
+  .post-topline { align-items: flex-start; flex-wrap: wrap; }
+  .post-topline time { margin-left: 54px; }
+}

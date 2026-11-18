@@ -1,0 +1,112 @@
+@use '../../style/button.scss';
+
+.auth-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at top left, rgba(225, 75, 51, 0.14), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(27, 134, 255, 0.14), transparent 30%),
+    linear-gradient(180deg, #071019 0%, #0d1723 100%);
+}
+
+.auth-card {
+  width: min(460px, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 32px;
+  border-radius: 24px;
+  background: rgba(14, 20, 31, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(18px);
+}
+
+.auth-card--status {
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0;
+  color: #ff8560;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.auth-card h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  line-height: 1.05;
+  color: #f8fbff;
+}
+
+.auth-subtitle {
+  margin: 0;
+  color: #9fb0c4;
+  line-height: 1.7;
+}
+
+.auth-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.auth-card .input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.auth-card .input-group label {
+  color: #dbe7f3;
+  font-weight: 600;
+}
+
+.auth-card .input-group input {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  outline: none;
+  padding: 0.95rem 1rem;
+  border-radius: 14px;
+  background: #121c28;
+  color: #f8fbff;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.auth-card .input-group input:focus {
+  border-color: rgba(225, 75, 51, 0.85);
+  box-shadow: 0 0 0 4px rgba(225, 75, 51, 0.15);
+}
+
+.auth-card a {
+  color: #ff8560;
+  text-decoration: none;
+}
+
+.auth-card a:hover {
+  color: #ffab81;
+}
+
+.auth-switch {
+  margin: 0;
+  color: #9fb0c4;
+}
+
+.form-message {
+  margin: 0;
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+}
+
+.form-message.error {
+  background: rgba(255, 92, 92, 0.12);
+  border: 1px solid rgba(255, 92, 92, 0.24);
+  color: #ffb9b9;
+}

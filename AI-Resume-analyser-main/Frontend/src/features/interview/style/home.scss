@@ -1,0 +1,525 @@
+$primary: #e14b33;
+$primary-light: #ff8560;
+$accent: #1b86ff;
+$bg: #09131d;
+$card: #111d28;
+$card-light: #182734;
+$text: #f5f7fb;
+$text-secondary: #8d9aac;
+$shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+
+.home {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(225, 75, 51, 0.18), transparent 25%),
+    radial-gradient(circle at right bottom, rgba(27, 134, 255, 0.16), transparent 30%),
+    linear-gradient(180deg, #09131d 0%, #11202c 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 60px 25px;
+}
+
+.home-container {
+  max-width: 1300px;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.bg-circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(140px);
+  opacity: 0.15;
+}
+
+.bg-circle-1 {
+  width: 420px;
+  height: 420px;
+  background: $primary;
+  left: -150px;
+  top: -150px;
+}
+
+.bg-circle-2 {
+  width: 450px;
+  height: 450px;
+  background: $accent;
+  right: -170px;
+  bottom: -170px;
+}
+
+.community-link {
+  position: absolute;
+  z-index: 4;
+  top: 24px;
+  right: 86px;
+  padding: 10px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 12px;
+  background: rgba(17, 29, 40, 0.84);
+  color: $text;
+  cursor: pointer;
+}
+
+.community-link:hover { border-color: $primary-light; color: $primary-light; }
+
+.hero {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.badge {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba(225, 75, 51, 0.12);
+  color: $primary-light;
+  border: 1px solid rgba(225, 75, 51, 0.22);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.hero h1 {
+  margin: 0 0 20px;
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: 700;
+  line-height: 1.08;
+}
+
+.hero span {
+  background: linear-gradient(90deg, $primary, #ffbc6b, #4cc4ff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  max-width: 760px;
+  margin: auto;
+  color: $text-secondary;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.main-card {
+  display: grid;
+  grid-template-columns: 1.2fr 0.9fr;
+  gap: 30px;
+  padding: 32px;
+  border-radius: 28px;
+  background: rgba(17, 29, 40, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: $shadow;
+  backdrop-filter: blur(18px);
+}
+
+.left-panel,
+.right-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.left-panel {
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+  padding-right: 25px;
+}
+
+.right-panel {
+  padding-left: 10px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.section-icon {
+  width: 55px;
+  height: 55px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  background: rgba(225, 75, 51, 0.12);
+  color: $primary-light;
+  font-size: 0.92rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.section-header h3 {
+  margin: 0 0 4px;
+  font-size: 1.2rem;
+}
+
+.section-header p {
+  margin: 0;
+  color: $text-secondary;
+  font-size: 0.9rem;
+}
+
+.home textarea {
+  width: 100%;
+  background: $card-light;
+  color: $text;
+  border: 1px solid transparent;
+  border-radius: 18px;
+  resize: none;
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.8;
+  transition: 0.3s;
+  outline: none;
+}
+
+.home textarea::placeholder {
+  color: #8a94a6;
+}
+
+.home textarea:focus {
+  border-color: $primary;
+  box-shadow: 0 0 0 4px rgba(225, 75, 51, 0.16);
+}
+
+.jobDescription {
+  height: 560px;
+}
+
+.selfDescription {
+  height: 170px;
+}
+
+.character-count {
+  margin-top: 12px;
+  text-align: right;
+  color: $text-secondary;
+  font-size: 0.82rem;
+}
+
+.upload-section {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 25px;
+}
+
+.upload-section label:first-child {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.upload-section label span {
+  color: $primary-light;
+  font-size: 0.82rem;
+}
+
+.upload-box {
+  min-height: 220px;
+  border: 2px dashed rgba(255, 255, 255, 0.15);
+  border-radius: 18px;
+  background: $card-light;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 20px;
+}
+
+.upload-box:hover {
+  border-color: $primary;
+  background: rgba(225, 75, 51, 0.06);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(225, 75, 51, 0.14);
+}
+
+.upload-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: rgba(225, 75, 51, 0.12);
+  color: $primary-light;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  margin-bottom: 18px;
+}
+
+.upload-box h4,
+.upload-box p,
+.upload-box small {
+  margin: 0;
+}
+
+.upload-box h4 {
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+}
+
+.upload-box p {
+  color: $text-secondary;
+  margin-bottom: 10px;
+}
+
+.upload-box small {
+  color: #7f8796;
+}
+
+input[type='file'] {
+  display: none;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 28px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.divider span {
+  color: $text-secondary;
+  font-size: 0.9rem;
+}
+
+.self-description-section {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.self-description-section label {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.info-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin: 24px 0;
+  padding: 16px 18px;
+  border-radius: 16px;
+  background: rgba(27, 134, 255, 0.12);
+  border: 1px solid rgba(27, 134, 255, 0.18);
+}
+
+.info-box span {
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.info-box p {
+  margin: 0;
+  color: #cfd8e3;
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+.generate-btn {
+  width: 100%;
+  height: 58px;
+  border: none;
+  border-radius: 16px;
+  background: linear-gradient(135deg, $primary, #ff7a45);
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.generate-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(225, 75, 51, 0.35);
+}
+
+.generate-btn:disabled {
+  opacity: 0.75;
+  cursor: wait;
+}
+
+.panel-message {
+  margin: 0 0 16px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  font-size: 0.92rem;
+}
+
+.panel-message.error {
+  background: rgba(255, 92, 92, 0.12);
+  border: 1px solid rgba(255, 92, 92, 0.22);
+  color: #ffc0c0;
+}
+
+.history-panel {
+  margin-top: 28px;
+  padding: 26px;
+  border-radius: 28px;
+  background: rgba(17, 29, 40, 0.86);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: $shadow;
+}
+
+.history-header h2,
+.history-header p {
+  margin: 0;
+}
+
+.history-header h2 {
+  margin-bottom: 6px;
+  font-size: 1.4rem;
+}
+
+.history-header p {
+  color: $text-secondary;
+}
+
+.history-grid {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.history-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 18px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  background: $card-light;
+  color: $text;
+  cursor: pointer;
+  text-align: left;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.history-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(225, 75, 51, 0.35);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.24);
+}
+
+.history-title,
+.history-date {
+  margin: 0;
+}
+
+.history-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.history-date {
+  color: $text-secondary;
+  font-size: 0.88rem;
+}
+
+.history-score {
+  min-width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(225, 75, 51, 0.14);
+  color: $primary-light;
+  font-weight: 800;
+}
+
+.history-empty {
+  padding: 18px;
+  border-radius: 20px;
+  background: $card-light;
+  color: $text-secondary;
+}
+
+.history-empty h3,
+.history-empty p {
+  margin: 0;
+}
+
+.history-empty h3 {
+  margin-bottom: 8px;
+}
+
+.footer {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  color: $text-secondary;
+}
+
+@media (max-width: 1100px) {
+  .main-card {
+    grid-template-columns: 1fr;
+  }
+
+  .left-panel {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding-right: 0;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+  }
+
+  .right-panel {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.6rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  .main-card {
+    padding: 22px;
+  }
+
+  .jobDescription {
+    height: 380px;
+  }
+
+  .upload-box {
+    min-height: 180px;
+  }
+}
+
+@media (max-width: 500px) {
+  .home {
+    padding: 30px 15px;
+  }
+
+  .section-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .history-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .community-link { top: 20px; right: 76px; font-size: .78rem; }
+}
